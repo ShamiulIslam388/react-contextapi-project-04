@@ -1,14 +1,15 @@
 import "./styles.css";
-import { createContext } from "react";
+import { useState } from "react";
+import ThemeContext from "./context/ThemeContext";
+import Button from "./Button";
 
 export default function App() {
-  const myContext = createContext({ color: "black" });
-  console.log(myContext._currentValue.color);
-  console.log(myContext.Provider);
-  console.log(myContext.Consumer);
+  const [color, setColor] = useState("red");
   return (
-    <div className="App">
-      <h1>Hello Context api!!!</h1>
-    </div>
+    <ThemeContext.Provider value={{ color }}>
+      <h1>Hello CodeSandbox</h1>
+      <h2>Start editing to see some magic happen!</h2>
+      <Button />
+    </ThemeContext.Provider>
   );
 }

@@ -2,3 +2,21 @@
   font-family: sans-serif;
   text-align: center;
 }
+
+.blue {
+  background: blue;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.red {
+  background: red;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
