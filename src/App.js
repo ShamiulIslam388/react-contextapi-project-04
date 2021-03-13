@@ -5,8 +5,12 @@ import Button from "./Button";
 
 export default function App() {
   const [color, setColor] = useState("red");
+  function changeColor() {
+    if (color === "red") setColor("blue");
+    else setColor("red");
+  }
   return (
-    <ThemeContext.Provider value={{ color }}>
+    <ThemeContext.Provider value={{ color, changeColor }}>
       <h1>Hello CodeSandbox</h1>
       <h2>Start editing to see some magic happen!</h2>
       <Button />

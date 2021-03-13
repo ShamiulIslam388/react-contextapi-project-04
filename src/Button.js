@@ -4,7 +4,9 @@ const Button = () => {
   return (
     <ThemeContext.Consumer>
       {(context) => (
-        <button className={context.color}>Change Color {context.color} </button>
+        <button className={context.color} onClick={context.changeColor}>
+          Change Color
+        </button>
       )}
     </ThemeContext.Consumer>
   );
